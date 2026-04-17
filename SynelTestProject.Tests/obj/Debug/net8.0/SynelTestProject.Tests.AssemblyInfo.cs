@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SynelTestProject.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+443c0a7149f85931e791bead67ec006c5a38e5ad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1e2c36aefc139435fdf470f118b0603672f3e3e")]
 [assembly: System.Reflection.AssemblyProductAttribute("SynelTestProject.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SynelTestProject.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
