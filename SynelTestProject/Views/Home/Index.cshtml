@@ -1,8 +1,44 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    ViewData["Title"] = "Employee Import";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="page-shell">
+    <section class="hero-card">
+        <div>
+            <p class="eyebrow">Integration With External Party</p>
+            <h1>Employee import console</h1>
+            <p class="hero-copy">Upload a CSV file, import its rows into SQL Server, and manage the imported employees in place.</p>
+        </div>
+        <form id="importForm" class="import-panel" enctype="multipart/form-data">
+            <label class="form-label" for="csvFile">CSV file</label>
+            <input id="csvFile" name="file" type="file" class="form-control" accept=".csv,text/csv" />
+            <button id="importButton" type="submit" class="btn btn-primary">Import</button>
+            <div id="importStatus" class="status-panel" aria-live="polite"></div>
+        </form>
+    </section>
+
+    <section class="grid-card">
+        <div class="grid-toolbar">
+            <div>
+                <h2>Employees</h2>
+                <p class="grid-subtitle">Default order is surname ascending when that column exists.</p>
+            </div>
+            <label class="search-box" for="gridSearch">
+                <span>Search</span>
+                <input id="gridSearch" type="search" class="form-control" placeholder="Filter employees" />
+            </label>
+        </div>
+        <div id="employeeGrid"></div>
+    </section>
 </div>
+
+@section Styles
+{
+    <link rel="stylesheet" href="https://unpkg.com/tabulator-tables@6.3.0/dist/css/tabulator_bootstrap5.min.css" />
+}
+
+@section Scripts
+{
+    <script src="https://unpkg.com/tabulator-tables@6.3.0/dist/js/tabulator.min.js"></script>
+    <script src="~/js/employee-grid.js" asp-append-version="true"></script>
+}

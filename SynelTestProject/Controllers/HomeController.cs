@@ -1,20 +1,24 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using SynelTestProject.Models;
+using SynelTestProject.Services;
 
 namespace SynelTestProject.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly IEmployeeRepository _employeeRepository;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, IEmployeeRepository employeeRepository)
     {
         _logger = logger;
+        _employeeRepository = employeeRepository;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index(CancellationToken cancellationToken)
     {
+        await _employeeRepository.EnsureDatabaseAsync(cancellationToken);
         return View();
     }
 

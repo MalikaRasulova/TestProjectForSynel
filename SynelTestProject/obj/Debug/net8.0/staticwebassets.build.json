@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5OQCrsI+w+Jh6A7cioNjfULH2PmnCAlojtJ6su5YSS8=",
+  "Hash": "R2Sz9eZgHGor+laEsbSU94ckQh3nMUYkV09VTRQz88E=",
   "Source": "SynelTestProject",
   "BasePath": "_content/SynelTestProject",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Malika\\RiderProjects\\SynelTestProject\\SynelTestProject\\wwwroot\\js\\employee-grid.js",
+      "SourceId": "SynelTestProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Malika\\RiderProjects\\SynelTestProject\\SynelTestProject\\wwwroot\\",
+      "BasePath": "_content/SynelTestProject",
+      "RelativePath": "js/employee-grid.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\employee-grid.js"
     },
     {
       "Identity": "C:\\Users\\Malika\\RiderProjects\\SynelTestProject\\SynelTestProject\\wwwroot\\js\\site.js",

@@ -1,22 +1,149 @@
-html {
-  font-size: 14px;
-}
-
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+:root {
+  --page-bg: #f3efe6;
+  --card-bg: rgba(255, 252, 247, 0.88);
+  --card-border: rgba(67, 50, 31, 0.12);
+  --ink: #1f1a15;
+  --muted: #6a6056;
+  --accent: #a84d1c;
+  --accent-dark: #7f3813;
 }
 
 html {
-  position: relative;
+  font-size: 16px;
   min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(168, 77, 28, 0.18), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(78, 120, 93, 0.18), transparent 22%),
+    linear-gradient(135deg, #f6f0e7 0%, #efe8de 48%, #f9f5ef 100%);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.app-main {
+  padding: 2rem 1rem 3rem;
+}
+
+.page-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero-card,
+.grid-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  box-shadow: 0 18px 40px rgba(54, 40, 24, 0.08);
+  backdrop-filter: blur(14px);
+}
+
+.hero-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1.75rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.hero-card h1,
+.grid-card h2 {
+  margin: 0;
+}
+
+.hero-copy,
+.grid-subtitle {
+  margin: 0.6rem 0 0;
+  color: var(--muted);
+}
+
+.import-panel {
+  display: grid;
+  gap: 0.75rem;
+  align-content: start;
+}
+
+.form-label,
+.search-box span {
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+.status-panel {
+  min-height: 1.5rem;
+  color: var(--muted);
+}
+
+.status-panel.is-error {
+  color: #b42318;
+}
+
+.status-panel.is-success {
+  color: #1d6f42;
+}
+
+.grid-card {
+  padding: 1.5rem;
+}
+
+.grid-toolbar {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-box {
+  min-width: min(100%, 320px);
+}
+
+#employeeGrid {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(67, 50, 31, 0.12);
+}
+
+.tabulator {
+  border: none;
+}
+
+.tabulator .tabulator-header {
+  background: #f4e6d8;
+  border-bottom: 1px solid rgba(67, 50, 31, 0.12);
+}
+
+.tabulator-row.tabulator-selected {
+  background: rgba(168, 77, 28, 0.12);
+}
+
+@media (min-width: 900px) {
+  .hero-card {
+    grid-template-columns: 1.3fr 0.9fr;
+    align-items: start;
+  }
 }

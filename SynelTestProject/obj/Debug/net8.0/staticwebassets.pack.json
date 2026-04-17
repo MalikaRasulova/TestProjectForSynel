@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Malika\\RiderProjects\\SynelTestProject\\SynelTestProject\\wwwroot\\js\\employee-grid.js",
+      "PackagePath": "staticwebassets\\js\\employee-grid.js"
+    },
+    {
       "Id": "C:\\Users\\Malika\\RiderProjects\\SynelTestProject\\SynelTestProject\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
